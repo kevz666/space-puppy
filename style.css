@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #0a0f33; /* Dark blue for the night sky */
+    cursor: url('https://images.vexels.com/media/users/3/149488/isolated/preview/74363285bb2fcab1fb3f3ebec246ae07-basketball-ball-cartoon.png'), auto;
+}
+
+#moon-landscape {
+    background: url('https://t3.ftcdn.net/jpg/01/96/24/18/360_F_196241820_mQq2TKoPJ3VDlUS2nvuu7rjjsdGjbZDD.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#space-puppy {
+    background: url('https://cdn.pixabay.com/photo/2023/04/26/10/46/dog-7952110_1280.png') no-repeat center center;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cta-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#join-mission {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ff9000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#join-mission:hover {
+    background-color: #ffa733;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes bounce {
+    100% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
+@keyframes floatBall {
+    100% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+}
+
+@media (max-width: 768px) {
+    #space-puppy, #ball {
+        width: 100%;
+        height: 100%;
+    }
+    #join-mission {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    #popup {
+        width: 80%;
+    }
+}
